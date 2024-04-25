@@ -1,0 +1,98 @@
+<!--Descripcion: Actividad 2-->
+<!--Desarrollodor; Jose Carlos Munoz ALberti-->
+<!--Fecha; Formato gringo 2024.04.24-->
+<!--Cambios; Implemento de una tabla que repite los datos de la cotizacion y el registro del usuario-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Cotizacion</title>
+</head>
+<body>
+
+<main class="container mt-5">
+    <h1 class="text-center">Formulario de Cotizacion</h1>
+    <h3 class="text-center">Ingrese los datos para cotizar:</h3>
+    <section class="row">
+        <div class="col-md-6 form-column">
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" class="form-control" placeholder="Juan Andrés">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input id="apellido" type="text" class="form-control" placeholder="Torres Arancibia">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Direccion:</label>
+                    <input id="direccion" type="text" class="form-control" placeholder="santo domingo 345">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" class="form-control" placeholder="iplacex@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label>Ancho Piso:</label>
+                    <input id="ancho" type="number" class="form-control" placeholder="10">
+                </div>
+                <div class="form-group">
+                    <label>Largo Piso:</label>
+                    <input id="largo" type="number" class="form-control" placeholder="8">
+                </div>
+                <button id="send" class="btn btn-primary btn-block">Calcular</button>
+            </form>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <!-- Cuadro de resultados oculto con HIDDEN -->
+            <div class="border rounded p-4 mt-4" hidden>
+                <h3 class="text-center">m2 Totales</h3>
+                <p id="mtr" class="text-center">0</p>
+                <h3 class="text-center">Total del Trabajo</h3>
+                <p id="totali" class="text-center"> 0</p>
+            </div>
+        </div>
+        
+        </div>
+    </section>
+</main>
+<!-- Tabla para mostrar los datos del formulario -->
+<table id="tablaform" style="color: aliceblue;" class="table mt-4">
+    <thead>
+        <tr>
+            <th style="color: aliceblue;">Nombre</th>
+            <th style="color: aliceblue;">Apellido</th>
+            <th style="color: aliceblue;">Direccion</th>
+            <th style="color: aliceblue;">Email</th>
+            <th style="color: aliceblue;">Ancho Piso</th>
+            <th style="color: aliceblue;">Largo Piso</th>
+            <th style="color: aliceblue;">m2 Totales</th>
+            <th style="color: aliceblue;">Total del Trabajo</th>
+        </tr>
+    </thead>
+    <tbody id="formDataList">
+        <!-- Aquí se insertarán los datos del formulario -->
+    </tbody>
+</table>
+<!-- Los src de boostrap y jquery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
